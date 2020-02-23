@@ -1,0 +1,8 @@
+bug fix===== branch 42
+ deletePTByProjectSequence(){
+ Backlog backlog=projectTask.getBacklog();
+        List<ProjectTask> pts=backlog.getProjectTasks();
+        pts.remove(projectTask);
+        backlogRepository.save(backlog);
+
+}
